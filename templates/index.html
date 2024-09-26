@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knapsack Problem Solutions</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .custom-table {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .btn-custom {
+            background-color: #28a745;
+            color: white;
+            border-radius: 25px;
+        }
+        .btn-custom:hover {
+            background-color: #218838;
+        }
+        .header-text {
+            font-family: 'Arial', sans-serif;
+            color: #343a40;
+        }
+        .nav-link.active {
+            background-color: #28a745 !important;
+            color: white !important;
+        }
+        .nav-link {
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sticky Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <a class="navbar-brand" href="#">Knapsack Solver</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+
+    <div class="container mt-5">
+        <!-- Title -->
+        <h1 class="text-center header-text mb-4">Knapsack Problem Solutions</h1>
+
+        <!-- Tab Navigation for Switching Between Tables -->
+        <ul class="nav nav-tabs justify-content-center mb-4" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="valid-combinations-tab" data-toggle="tab" href="#valid-combinations" role="tab" aria-controls="valid-combinations" aria-selected="true">All Valid Combinations</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="best-solution-tab" data-toggle="tab" href="#best-solution" role="tab" aria-controls="best-solution" aria-selected="false">Best Solution</a>
+            </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content" id="myTabContent">
+            <!-- All Valid Combinations Tab -->
+            <div class="tab-pane fade show active" id="valid-combinations" role="tabpanel" aria-labelledby="valid-combinations-tab">
+                <div class="card custom-table p-4">
+                    <h2 class="text-center">All Valid Combinations</h2>
+                    <table class="table table-hover table-striped table-bordered mt-4">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Kombinasi</th>
+                                <th>Nilai</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for combination, value in valid_solutions %}
+                                <tr>
+                                    <td>{{ combination }}</td>
+                                    <td>{{ value }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Best Solution Tab -->
+            <div class="tab-pane fade" id="best-solution" role="tabpanel" aria-labelledby="best-solution-tab">
+                <div class="card custom-table p-4">
+                    <h2 class="text-center">Best Solution</h2>
+                    <div class="text-center">
+                        <p class="lead">Kombinasi Terbaik: <span class="font-weight-bold">{{ max_solution[0] }}</span></p>
+                        <p class="lead">Nilai Maksimum: <span class="font-weight-bold">{{ max_solution[1] }}</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Button to refresh the page (runs the algorithm again) -->
+        <div class="text-center mt-4">
+            <a href="/" class="btn btn-custom btn-lg">Run Again</a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
