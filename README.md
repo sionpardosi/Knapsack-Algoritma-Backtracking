@@ -1,4 +1,4 @@
-# Knapsack Problem with Backtracking
+# App Knapsack Problem with Backtracking
 
 Diberikan sejumlah item dengan berat dan nilai tertentu, serta sebuah ransel dengan kapasitas tertentu. Tugas Anda adalah memilih item-item untuk dimasukkan ke dalam ransel sehingga nilai total item-item yang dipilih maksimal, tanpa melebihi kapasitas ransel.
 
