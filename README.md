@@ -1,5 +1,14 @@
 # App Knapsack Problem with Backtracking
 
+### <summary><strong>Tools:</strong></summary>
+<p>
+    <img src="https://img.shields.io/badge/Language-Python-blue?logo=python&logoColor=white" />
+    <img src="https://img.shields.io/badge/Algorithm-Backtracking-orange?logo=python&logoColor=white" />
+    <img src="https://img.shields.io/badge/Library-Numpy-green?logo=numpy&logoColor=white" />
+    <img src="https://img.shields.io/badge/IDE-PyCharm-000000?logo=pycharm&logoColor=white" />
+    <img src="https://img.shields.io/badge/Tool-Jupyter%20Notebook-FFD43B?logo=python&logoColor=white" />
+</p>
+
 Diberikan sejumlah item dengan berat dan nilai tertentu, serta sebuah ransel dengan kapasitas tertentu. Tugas Anda adalah memilih item-item untuk dimasukkan ke dalam ransel sehingga nilai total item-item yang dipilih maksimal, tanpa melebihi kapasitas ransel.
 
 ## Batasan Tambahan:
